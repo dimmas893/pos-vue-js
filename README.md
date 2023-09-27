@@ -30,11 +30,16 @@
 -pos
 <img src="./web-pos.png" width="100%">
 
+
 akun login admin
+
 
 email : admin@gmail.com
 password : password
 
+
 instalasi
+
 -npm install
+
 -npm run dev
