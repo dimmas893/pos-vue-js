@@ -303,6 +303,7 @@ export default {
       this.products = data.data;
       this.totalPages = data.last_page;
       this.link = data.links;
+      console.log(data);
     },
     setCategories(data) {
       this.categories = data;

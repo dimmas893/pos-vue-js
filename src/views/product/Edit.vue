@@ -42,13 +42,14 @@
               type="text"
               class="form-control"
               placeholder="Masukan kode"
+              disabled
               v-model="product.kode" />
           </div>
 
           <div class="mb-3">
             <label class="form-label">Stock</label>
             <input
-              type="text"
+              type="number"
               class="form-control"
               placeholder="Masukan stock"
               v-model="product.stock" />
@@ -57,7 +58,7 @@
           <div class="mb-3">
             <label class="form-label">Price</label>
             <input
-              type="text"
+              type="number"
               class="form-control"
               placeholder="Masukan price"
               v-model="product.price" />
