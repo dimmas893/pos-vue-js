@@ -23,7 +23,8 @@ const app = createApp(App);
 
 app.use(router);
 
-app.config.globalProperties.$api = "http://localhost:8000";
+app.config.globalProperties.$api =
+  "https://anandadimmasbudiarto.my.id/aplikasi/pos";
 
 // Tambahkan loader sebagai variabel global
 app.config.globalProperties.$loader = null;

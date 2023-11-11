@@ -531,12 +531,12 @@ export default {
     },
     async loadDataAsync() {
       // Menampilkan elemen loading
-      // this.$loader = this.$loading.show({
-      //   container: this.fullPage ? null : this.$refs.formContainer,
-      //   color: "#0074e4",
-      // });
 
       try {
+        this.$loader = this.$loading.show({
+          container: this.fullPage ? null : this.$refs.formContainer,
+          color: "#0074e4",
+        });
         await this.loadData();
         await this.categorieData();
         await this.cartData();

@@ -38,3 +38,7 @@ password : password
 instalasi
 -npm install
 -npm run dev
+
+#note
+
+-jika error di asset template maka hapus folder template lalu exstrak template.zip lalu done
