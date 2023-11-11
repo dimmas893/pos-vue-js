@@ -25,6 +25,7 @@ const router = createRouter({
       name: "admin",
       redirect: "/admin/dashboard",
       component: () => import("../components/componentBE/template/Index.vue"),
+      beforeEnter: authMiddleware,
       children: [
         {
           path: "dashboard",
@@ -95,7 +96,6 @@ const router = createRouter({
           beforeEnter: authMiddleware,
         },
       ],
-      beforeEnter: authMiddleware,
     },
   ],
 });
@@ -108,7 +108,6 @@ export default router;
 
 function authMiddleware(to, from, next) {
   const loggedIn = localStorage.getItem("loggedIn");
-
   if (!loggedIn) {
     // Redirect to the previous page if not authenticated
     router.go(-1);
@@ -119,7 +118,6 @@ function authMiddleware(to, from, next) {
 
 function guestMiddleware(to, from, next) {
   const loggedIn = localStorage.getItem("loggedIn");
-
   if (loggedIn) {
     // Redirect to the previous page if already logged in
     router.go(-1);
